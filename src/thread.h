@@ -43,7 +43,8 @@
 class Thread {
 
   Mutex mutex;
-  ConditionVariable cv;
+  ConditionVariable cvS;
+  ConditionVariable cvE;
   size_t idx;
   bool exit = false, searching = true; // Set before starting std::thread
   NativeThread stdThread;
